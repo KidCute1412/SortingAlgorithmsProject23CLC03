@@ -127,10 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ManageProgram\DataGenerator.cpp" />
+    <ClCompile Include="ManageProgram\ProgramMode.cpp" />
     <ClCompile Include="RadixSort.cpp" />
     <ClCompile Include="Sorting Algorithms Project 23CLC03.cpp" />
+    <ClCompile Include="SortingAlgorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ManageProgram\DataGenerator.h" />
+    <ClInclude Include="ManageProgram\ProgramMode.h" />
+    <ClInclude Include="SortingAlgorithms.h" />
     <ClInclude Include="RadixSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

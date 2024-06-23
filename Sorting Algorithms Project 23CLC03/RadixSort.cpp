@@ -2,7 +2,7 @@
 
 
 
-void RadixSortAlgorithm::specifySign()
+void specifySign(int* arr, int n, int*& positive, int& n1, int*& negative, int& n2, long long &comparison)
 {
 	int countNegative = 0;
 	for (int i = 0; ++comparison && i < n; i++)
@@ -37,7 +37,7 @@ void RadixSortAlgorithm::specifySign()
 
 	}
 }
-void RadixSortAlgorithm::mergePosNegNum()
+void mergePosNegNum(int*& arr, int n, int* positive, int n1, int* negative, int n2, long long& comparison)
 {
 	int pos1 = 0, pos2 = n2 - 1;
 	for (int i = 0; ++comparison && i < n; i++)
@@ -50,8 +50,16 @@ void RadixSortAlgorithm::mergePosNegNum()
 			arr[i] = positive[pos1++];
 		}
 	}
+	if (positive)
+	{
+		delete[] positive;
+	}
+	if (negative)
+	{
+		delete[] negative;
+	}
 }
-void RadixSortAlgorithm::RadixSort()
+void RadixSort(int*& arr, int n, long long& comparison)
 {
 	if (!arr)
 	{
@@ -111,30 +119,17 @@ void RadixSortAlgorithm::RadixSort()
 	delete[] buckets;
 
 }
-void RadixSortAlgorithm::performAlgorithm()
+void sortingAlgorithm::performRadixSort()
 {
-	start = std::chrono::high_resolution_clock::now();
-	specifySign();
+	auto start = std::chrono::high_resolution_clock::now();
+	int* positive = nullptr, * negative = nullptr;
+	int n1 = 0, n2 = 0;
+	specifySign(arr, n, positive, n1, negative, n2, comparison);
 	if (n1 > 0)
-		RadixSort();
+		RadixSort(arr, n, comparison);
 	if (n2 > 0)
-		RadixSort();
-	mergePosNegNum();
-	end = std::chrono::high_resolution_clock::now();
-	time = end - start;
-}
-RadixSortAlgorithm::~RadixSortAlgorithm()
-{
-	if (arr)
-	{
-		delete[] arr;
-	}
-	if (positive)
-	{
-		delete[] positive;
-	}
-	if (negative)
-	{
-		delete[] negative;
-	}
+		RadixSort(arr, n, comparison);
+	mergePosNegNum(arr, n, positive, n1, negative, n2, comparison);
+	auto end = std::chrono::high_resolution_clock::now();
+	time = std::chrono::duration<double>(end - start).count();
 }
