@@ -46,7 +46,7 @@ void mergePosNegNum(int*& arr, int n, int* positive, int n1, int* negative, int 
     }
 }
 
-void countingSort(int* arr, int n, long long& comparison) 
+void countingSort(int*& arr, int n, long long& comparison) 
 {
     if (n == 0) return; // Handle empty array case
 
