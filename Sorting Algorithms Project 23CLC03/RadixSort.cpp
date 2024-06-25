@@ -37,7 +37,7 @@ void specifySign(int* arr, int n, int*& positive, int& n1, int*& negative, int& 
 
 	}
 }
-void mergePosNegNum(int*& arr, int n, int* positive, int n1, int* negative, int n2, long long& comparison)
+void mergePosNegNum(int*& arr, int n, int* &positive, int n1, int* &negative, int n2, long long& comparison)
 {
 	int pos1 = 0, pos2 = n2 - 1;
 	for (int i = 0; ++comparison && i < n; i++)
@@ -126,9 +126,9 @@ void sortingAlgorithm::performRadixSort()
 	int n1 = 0, n2 = 0;
 	specifySign(arr, n, positive, n1, negative, n2, comparison);
 	if (n1 > 0)
-		RadixSort(arr, n, comparison);
+		RadixSort(positive, n1, comparison);
 	if (n2 > 0)
-		RadixSort(arr, n, comparison);
+		RadixSort(negative, n2, comparison);
 	mergePosNegNum(arr, n, positive, n1, negative, n2, comparison);
 	auto end = std::chrono::high_resolution_clock::now();
 	time = std::chrono::duration<double>(end - start).count();

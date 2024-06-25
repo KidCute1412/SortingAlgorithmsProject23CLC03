@@ -3,8 +3,8 @@
 #include<ctime>
 #include<cstdlib>
 #include<fstream>
-
-
+#include<cmath>
+#include<string>
 
 
 void generateRandomData(int*& arr, int n);

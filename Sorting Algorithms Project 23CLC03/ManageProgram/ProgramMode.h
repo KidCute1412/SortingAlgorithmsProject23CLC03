@@ -3,8 +3,8 @@
 #include <string>
 #include "../ManageProgram/DataGenerator.h"
 #include "../SortingAlgorithms.h"
-
-
+#include <iostream>
+#include "OutputData.h"
 
 
 using namespace std;
@@ -28,6 +28,7 @@ enum class InputOrder {
 	nsorted,
 	sorted,
 	rev,
+	FILE,
 	NONE
 };
 
@@ -41,11 +42,12 @@ enum class OutputParameters {
 
 
 
+std::string toString(SortingAlgorithms algo);
 SortingAlgorithms getSortingAlgorithm(const string& str);
 InputOrder getInputOrder(const string& str);
 OutputParameters getOutputParameters(const string& str);
 
-
+void performSortingAlgorithms(sortingAlgorithm& data, SortingAlgorithms algo);
 
 void generateData(sortingAlgorithm& data, InputOrder order);
 void processCommandLine(int argc, char* argv[]);

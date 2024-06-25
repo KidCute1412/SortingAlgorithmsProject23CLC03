@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sorting Algorithms Project 23CLC03.cpp">
+    <ClCompile Include="SortingAlgorithmsProject23CLC03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RadixSort.cpp">
@@ -30,6 +30,9 @@
     <ClCompile Include="ManageProgram\DataGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ManageProgram\OutputData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RadixSort.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ManageProgram\DataGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ManageProgram\OutputData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

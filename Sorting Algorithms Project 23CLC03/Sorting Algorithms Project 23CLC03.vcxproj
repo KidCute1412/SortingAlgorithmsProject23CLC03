@@ -70,6 +70,23 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>SortingAlgorithms</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <OutDir>$(SolutionDir)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>SortingAlgorithms</TargetName>
+    <OutDir>$(SolutionDir)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>SortingAlgorithms</TargetName>
+    <OutDir>$(SolutionDir)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>SortingAlgorithms</TargetName>
+    <OutDir>$(SolutionDir)</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -128,13 +145,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ManageProgram\DataGenerator.cpp" />
+    <ClCompile Include="ManageProgram\OutputData.cpp" />
     <ClCompile Include="ManageProgram\ProgramMode.cpp" />
     <ClCompile Include="RadixSort.cpp" />
-    <ClCompile Include="Sorting Algorithms Project 23CLC03.cpp" />
+    <ClCompile Include="SortingAlgorithmsProject23CLC03.cpp" />
     <ClCompile Include="SortingAlgorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ManageProgram\DataGenerator.h" />
+    <ClInclude Include="ManageProgram\OutputData.h" />
     <ClInclude Include="ManageProgram\ProgramMode.h" />
     <ClInclude Include="SortingAlgorithms.h" />
     <ClInclude Include="RadixSort.h" />
