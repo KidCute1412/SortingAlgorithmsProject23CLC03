@@ -8,7 +8,7 @@ void swap(int &a, int &b) {
     b = temp;
 }
 
-long heapify(int* arr, int n, int i, int &comparisonCount) {
+long heapify(int* arr, int n, int i, long &comparisonCount) {
     int largest = i;
     int left = 2 * i + 1; 
     int right = 2 * i + 2; 
