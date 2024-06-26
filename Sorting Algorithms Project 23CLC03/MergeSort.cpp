@@ -10,7 +10,7 @@ void sortingAlgorithm::performMergeSort(){
 void Merge(int *arr, int left, int mid, int right, long long& comp){
     int n1 = mid - left + 1;
     int n2 = right - mid;
-    int L[n1], R[n2];
+    int* L = new int[n1], *R = new int[n2];
     for (int i = 0; i < n1; i++)
         L[i] = arr[left + i];
     for (int j = 0; j < n2; j++)
@@ -39,6 +39,8 @@ void Merge(int *arr, int left, int mid, int right, long long& comp){
         j++;
         k++;
     }
+    delete []L;
+    delete []R;
 }
 
 void MergeSort(int* arr, int left, int right, long long& comp){
