@@ -1,50 +1,7 @@
 #include "CountingSort.h"
+#include "SortingAlgorithms.h"
 
 
-void specifySign(int* arr, int n, int*& positive, int& n1, int*& negative, int& n2, long long& comparison) {
-    int countNegative = 0;
-    for (int i = 0; ++comparison && i < n; i++) {
-        if (++comparison && arr[i] < 0) {
-            countNegative++;
-        }
-    }
-
-    n1 = n - countNegative;
-    n2 = countNegative;
-    if (n1 != 0) {
-        positive = new int[n1];
-        for (int i = 0, j = 0; i < n; ++i) {
-            if (arr[i] >= 0) {
-                positive[j++] = arr[i];
-            }
-        }
-    }
-    if (n2 != 0) {
-        negative = new int[n2];
-        for (int i = 0, j = 0; i < n; ++i) {
-            if (arr[i] < 0) {
-                negative[j++] = -arr[i];
-            }
-        }
-    }
-}
-
-void mergePosNegNum(int*& arr, int n, int* positive, int n1, int* negative, int n2, long long& comparison) {
-    int pos1 = 0, pos2 = n2 - 1;
-    for (int i = 0; ++comparison && i < n; i++) {
-        if (++comparison && pos2 >= 0) {
-            arr[i] = -negative[pos2--];
-        } else {
-            arr[i] = positive[pos1++];
-        }
-    }
-    if (positive) {
-        delete[] positive;
-    }
-    if (negative) {
-        delete[] negative;
-    }
-}
 
 void countingSort(int*& arr, int n, long long& comparison) 
 {

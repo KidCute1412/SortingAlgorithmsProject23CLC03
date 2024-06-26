@@ -3,7 +3,7 @@
 
 
 void insertionSort(int*& arr, int n, long long& comparison) {
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1;++comparison && i < n; ++i) {
         int key = arr[i];
         int j = i - 1;
 

@@ -24,7 +24,7 @@ struct sortingAlgorithm
 	void performQuickSort();
 	void performCountingSort();
 	void performRadixSort();
-	void performFlashSort();
+	//void performFlashSort();
 
 };
 

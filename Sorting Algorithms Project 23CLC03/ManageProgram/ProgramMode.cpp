@@ -110,7 +110,7 @@ void performSortingAlgorithms(sortingAlgorithm& data, SortingAlgorithms algo)
 		data.performRadixSort();
 		break;
 	case SortingAlgorithms::FlashSort:
-		data.performFlashSort();
+		//data.performFlashSort();
 		break;
 	default:
 		break;
@@ -202,7 +202,7 @@ void processCommandLine(int argc, char* argv[]) {
 			}
 			
 			generateData(data, inputOrder);
-
+			outputGeneratedData(data.arr, data.n);
             performSortingAlgorithms(data, algo);
 
 			// Output Operations
@@ -273,13 +273,14 @@ void processCommandLine(int argc, char* argv[]) {
 		// Command line 4
         if (argc == 5) { // Case: [Execution file] -c [Algorithm 1] [Algorithm 2] [Given input]
             std::string fileName = argv[4];
-			readFileData(data1.arr, data2.n, fileName);
+			readFileData(data1.arr, data1.n, fileName);
 			if (!data1.arr) {
 				std::cerr << "Invalid input file." << std::endl;
 				return;
 			}
 			copyArray(data1.arr, data2.arr, data1.n);
-			outputGeneratedData(data1.arr, data1.n);
+			data2.n = data1.n;
+			
 			performSortingAlgorithms(data1, algo1);
 			performSortingAlgorithms(data2, algo2);
 			// Output Operations
@@ -308,6 +309,7 @@ void processCommandLine(int argc, char* argv[]) {
 			data1.n = inputSize, data2.n = inputSize;
 			generateData(data1, inputOrder);
 			copyArray(data1.arr, data2.arr, data1.n);
+			data2.n = data1.n;
 			outputGeneratedData(data1.arr, data1.n);
 			performSortingAlgorithms(data1, algo1);
 			performSortingAlgorithms(data2, algo2);

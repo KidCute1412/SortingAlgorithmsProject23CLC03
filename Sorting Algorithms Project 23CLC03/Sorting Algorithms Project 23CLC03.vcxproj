@@ -144,17 +144,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BubbleSort.cpp" />
+    <ClCompile Include="CountingSort.cpp" />
+    <ClCompile Include="HeapSort.cpp" />
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="ManageProgram\DataGenerator.cpp" />
     <ClCompile Include="ManageProgram\OutputData.cpp" />
     <ClCompile Include="ManageProgram\ProgramMode.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="RadixSort.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="ShakerSort.cpp" />
+    <ClCompile Include="ShellSort.cpp" />
     <ClCompile Include="SortingAlgorithmsProject23CLC03.cpp" />
     <ClCompile Include="SortingAlgorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="CountingSort.h" />
+    <ClInclude Include="HeapSort.h" />
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="ManageProgram\DataGenerator.h" />
     <ClInclude Include="ManageProgram\OutputData.h" />
     <ClInclude Include="ManageProgram\ProgramMode.h" />
+    <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="SelectionSort.h" />
+    <ClInclude Include="ShakerSort.h" />
+    <ClInclude Include="ShellSort.h" />
     <ClInclude Include="SortingAlgorithms.h" />
     <ClInclude Include="RadixSort.h" />
   </ItemGroup>

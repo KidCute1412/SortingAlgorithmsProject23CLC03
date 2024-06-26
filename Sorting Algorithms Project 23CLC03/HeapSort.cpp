@@ -2,21 +2,21 @@
 
 using namespace std;
 
-void swap(int &a, int &b) {
-    int temp = a;
-    a = b;
-    b = temp;
-}
+//void swap(int &a, int &b) {
+//    int temp = a;
+//    a = b;
+//    b = temp;
+//}
 
-long heapify(int* arr, int n, int i, long &comparisonCount) {
+void heapify(int* &arr, int n, int i, long long &comparisonCount) {
     int largest = i;
     int left = 2 * i + 1; 
     int right = 2 * i + 2; 
 
-    if (left < n && ++comparisonCount && arr[left] > arr[largest])
+    if (++comparisonCount && left < n && ++comparisonCount && arr[left] > arr[largest])
         largest = left;
 
-    if (right < n && ++comparisonCount && arr[right] > arr[largest])
+    if (++comparisonCount && right < n && ++comparisonCount && arr[right] > arr[largest])
         largest = right;
 
     if (largest != i) {
@@ -24,17 +24,17 @@ long heapify(int* arr, int n, int i, long &comparisonCount) {
 
         heapify(arr, n, largest, comparisonCount);
     }
-    return comparisonCount;
+    
 }
 
-long heapSort(int* arr, int n) {
-    long comparisonCount = 0;
+long long heapSort(int* &arr, int n) {
+    long long comparisonCount = 0;
 
-    for (int i = n / 2 - 1; i >= 0; i--) {
+    for (int i = n / 2 - 1;++comparisonCount && i >= 0; i--) {
         heapify(arr, n, i, comparisonCount);
     }
 
-    for (int i = n - 1; i >= 0; i--) {
+    for (int i = n - 1;++comparisonCount && i >= 0; i--) {
         swap(arr[0], arr[i]);
         heapify(arr, i, 0, comparisonCount);
     }
@@ -44,7 +44,7 @@ long heapSort(int* arr, int n) {
 
 void sortingAlgorithm::performHeapSort(){
     auto start = std::chrono::high_resolution_clock::now();
-  	HeapSort(arr, n, comparison);
+  	comparison = heapSort(arr, n);
     auto end = std::chrono::high_resolution_clock::now();
 	time = std::chrono::duration<double>(end - start).count();
 }

@@ -3,5 +3,5 @@
 #include<chrono>
 #include "SortingAlgorithms.h"
 
-long shellSort(int* arr, int n);
-void sortingAlgorithm::performShellSort();
+long shellSort(int* &arr, int n);
+

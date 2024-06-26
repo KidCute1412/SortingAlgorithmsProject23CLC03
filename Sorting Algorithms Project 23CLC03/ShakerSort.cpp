@@ -7,25 +7,25 @@ void sortingAlgorithm::performShakerSort(){
     time = std::chrono::duration<double>(finish - start).count();
 }
 
-void ShakerSort(int *a, int n, long long& comp){
+void ShakerSort(int *&a, int n, long long& comp){
 	int left = 0;
 	int right = n - 1;
 	int k = 0;
-	while (left < right){
-		for (int i = left; i < right; i++){
-			if (a[i] > a[i + 1]){
+	while (++comp && left < right){
+		for (int i = left;++comp && i < right; i++){
+			if (++comp && a[i] > a[i + 1]){
 				std::swap(a[i], a[i + 1]);
 				k = i;
 			}
-			comp++;
+			
 		}
 		right = k;
-		for (int i = right; i > left; i--){
-			if (a[i] < a[i - 1]){
+		for (int i = right;++comp && i > left; i--){
+			if (++comp && a[i] < a[i - 1]){
 				std::swap(a[i], a[i - 1]);
 				k = i;
 			}
-			comp++;
+			
 		}
 		left = k;
 	}

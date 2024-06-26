@@ -2,14 +2,14 @@
 
 using namespace std; 
 
-long bubbleSort(int* arr, int n) {
-    long comparisonCount = 0;
+long long bubbleSort(int* &arr, int n) {
+    long long comparisonCount = 0;
     bool swapped;
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0;++comparisonCount && i < n - 1; i++) {
         swapped = false;
-        for (int j = 0; j < n - i - 1; j++) {
-            comparisonCount++;
-            if (arr[j] > arr[j + 1]) {
+        for (int j = 0; ++comparisonCount && j < n - i - 1; j++) {
+            
+            if (arr[j] > arr[j + 1] && ++comparisonCount) {
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
@@ -24,7 +24,7 @@ long bubbleSort(int* arr, int n) {
 
 void sortingAlgorithm::performBubbleSort(){
     auto start = std::chrono::high_resolution_clock::now();
-  	BubbleSort(arr, n, comparison);
+  	comparison = bubbleSort(arr, n);
     auto end = std::chrono::high_resolution_clock::now();
 	time = std::chrono::duration<double>(end - start).count();
 }
