@@ -110,7 +110,7 @@ void performSortingAlgorithms(sortingAlgorithm& data, SortingAlgorithms algo)
 		data.performRadixSort();
 		break;
 	case SortingAlgorithms::FlashSort:
-		//data.performFlashSort();
+		data.performFlashSort();
 		break;
 	default:
 		break;

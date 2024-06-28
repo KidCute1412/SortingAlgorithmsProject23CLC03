@@ -60,6 +60,9 @@
     <ClCompile Include="ShellSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FlashSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RadixSort.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ShellSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlashSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

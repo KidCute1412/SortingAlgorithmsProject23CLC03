@@ -19,7 +19,7 @@ void generateSortedData(int*& arr, int n)
 	arr = new int[n];
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = i;
+		arr[i] = i - n / 2;
 	}
 }
 void generateReverseSortedData(int*& arr, int n)
@@ -27,7 +27,7 @@ void generateReverseSortedData(int*& arr, int n)
 	arr = new int[n];
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = n - i;
+		arr[i] = n/2 - i;
 	}
 }
 void generateNearlySortedData(int*& arr, int n)
@@ -35,7 +35,7 @@ void generateNearlySortedData(int*& arr, int n)
 	arr = new int[n];
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = i;
+		arr[i] = i - n / 2;
 	}
 	srand(static_cast<unsigned int>(time(0)));
 	for (int i = 0; i < n / 10; i++)

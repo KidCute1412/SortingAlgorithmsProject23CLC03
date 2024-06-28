@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="CountingSort.cpp" />
+    <ClCompile Include="FlashSort.cpp" />
     <ClCompile Include="HeapSort.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="ManageProgram\DataGenerator.cpp" />
@@ -163,6 +164,7 @@
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="CountingSort.h" />
+    <ClInclude Include="FlashSort.h" />
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="ManageProgram\DataGenerator.h" />
