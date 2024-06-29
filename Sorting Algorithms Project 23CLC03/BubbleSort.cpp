@@ -9,7 +9,7 @@ long long bubbleSort(int* &arr, int n) {
         swapped = false;
         for (int j = 0; ++comparisonCount && j < n - i - 1; j++) {
             
-            if (arr[j] > arr[j + 1] && ++comparisonCount) {
+            if (++comparisonCount && arr[j] > arr[j + 1]) {
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
