@@ -1,2 +1,14 @@
-﻿  BubbleSort.cpp
+﻿  ShakerSort.cpp
+D:\Sorting Algorithms Project 23CLC03\Sorting Algorithms Project 23CLC03\ShakerSort.cpp(7,84): warning C4244: '=': conversion from '_Rep' to 'double', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  ShellSort.cpp
+D:\Sorting Algorithms Project 23CLC03\Sorting Algorithms Project 23CLC03\ShellSort.cpp(29,84): warning C4244: '=': conversion from '_Rep' to 'double', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  Generating Code...
   Sorting Algorithms Project 23CLC03.vcxproj -> D:\Sorting Algorithms Project 23CLC03\SortingAlgorithms.exe

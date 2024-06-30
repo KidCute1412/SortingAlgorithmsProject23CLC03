@@ -4,7 +4,7 @@ void sortingAlgorithm::performMergeSort(){
     auto start = std::chrono::high_resolution_clock::now();
     MergeSort(arr, 0, n - 1, comparison);
     auto finish = std::chrono::high_resolution_clock::now();
-    time = std::chrono::duration<double>(finish - start).count();
+    time = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start).count();
 }
 
 void Merge(int *&arr, int left, int mid, int right, long long& comp){

@@ -37,7 +37,7 @@ void printAlgorithmMode12(sortingAlgorithm data, SortingAlgorithms algorithm, In
 	// Output parameter
 	if (output == OutputParameters::time)
 	{
-		cout << "Running time: " << data.time << " s" << endl;
+		cout << "Running time: " << data.time << " ms" << endl;
 	}
 	else if (output == OutputParameters::comp)
 	{
@@ -45,7 +45,7 @@ void printAlgorithmMode12(sortingAlgorithm data, SortingAlgorithms algorithm, In
 	}
 	else if (output == OutputParameters::both)
 	{
-		cout << "Running time: " << data.time << " s" << endl;
+		cout << "Running time: " << data.time << " ms" << endl;
 		cout << "Comparisons: " << data.comparison << endl;
 	}
 	
@@ -62,7 +62,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	cout << "---------------------" << endl;
 	if (output == OutputParameters::time)
 	{
-		cout << "Running time: " << data1.time << " s" << endl;
+		cout << "Running time: " << data1.time << " ms" << endl;
 	}
 	else if (output == OutputParameters::comp)
 	{
@@ -70,7 +70,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	}
 	else if (output == OutputParameters::both)
 	{
-		cout << "Running time: " << data1.time << " s" << endl;
+		cout << "Running time: " << data1.time << " ms" << endl;
 		cout << "Comparisons: " << data1.comparison << endl;
 	}
 	cout << endl;
@@ -78,7 +78,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	cout << "---------------------" << endl;
 	if (output == OutputParameters::time)
 	{
-		cout << "Running time: " << data2.time << " s" << endl;
+		cout << "Running time: " << data2.time << " ms" << endl;
 	}
 	else if (output == OutputParameters::comp)
 	{
@@ -86,7 +86,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	}
 	else if (output == OutputParameters::both)
 	{
-		cout << "Running time: " << data2.time << " s" << endl;
+		cout << "Running time: " << data2.time << " ms" << endl;
 		cout << "Comparisons: " << data2.comparison << endl;
 	}
 	cout << endl;
@@ -94,7 +94,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	cout << "---------------------" << endl;
 	if (output == OutputParameters::time)
 	{
-		cout << "Running time: " << data3.time << " s" << endl;
+		cout << "Running time: " << data3.time << " ms" << endl;
 	}
 	else if (output == OutputParameters::comp)
 	{
@@ -102,7 +102,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	}
 	else if (output == OutputParameters::both)
 	{
-		cout << "Running time: " << data3.time << " s" << endl;
+		cout << "Running time: " << data3.time << " ms" << endl;
 		cout << "Comparisons: " << data3.comparison << endl;
 	}
 	cout << endl;
@@ -110,7 +110,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	cout << "---------------------" << endl;
 	if (output == OutputParameters::time)
 	{
-		cout << "Running time: " << data4.time << " s" << endl;
+		cout << "Running time: " << data4.time << " ms" << endl;
 	}
 	else if (output == OutputParameters::comp)
 	{
@@ -118,7 +118,7 @@ void printAlgorithmMode3(sortingAlgorithm data1, sortingAlgorithm data2, sorting
 	}
 	else if (output == OutputParameters::both)
 	{
-		cout << "Running time: " << data4.time << " s" << endl;
+		cout << "Running time: " << data4.time << " ms" << endl;
 		cout << "Comparisons: " << data4.comparison << endl;
 	}
 	cout << endl;
@@ -153,7 +153,7 @@ void printComparisonMode(sortingAlgorithm data1, sortingAlgorithm data2,SortingA
 		cout << "Input order: Reversed" << endl;
 	}
 	cout << "---------------------" << endl;
-	cout << "Running time: " << data1.time << " s" << " | " << data2.time << " s" << endl;
+	cout << "Running time: " << data1.time << " ms" << " | " << data2.time << " ms" << endl;
 	cout << "Comparisons: " << data1.comparison << " | " << data2.comparison << endl;
 	cout << endl;
 }

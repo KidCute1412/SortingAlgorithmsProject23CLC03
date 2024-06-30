@@ -46,5 +46,5 @@ void sortingAlgorithm::performHeapSort(){
     auto start = std::chrono::high_resolution_clock::now();
   	comparison = heapSort(arr, n);
     auto end = std::chrono::high_resolution_clock::now();
-	time = std::chrono::duration<double>(end - start).count();
+    time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 }

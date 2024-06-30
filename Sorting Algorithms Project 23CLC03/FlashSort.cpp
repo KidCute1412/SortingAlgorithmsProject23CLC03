@@ -94,7 +94,7 @@ void sortingAlgorithm::performFlashSort()
     auto start = std::chrono::high_resolution_clock::now();
     FlashSort(arr, n, comparison);
     auto end = std::chrono::high_resolution_clock::now();
-    time = std::chrono::duration<double>(end - start).count();
+    time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 }
 
 
