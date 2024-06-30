@@ -4,7 +4,7 @@ void sortingAlgorithm::performQuickSort(){
     auto start = std::chrono::high_resolution_clock::now();
     QuickSortMedian(arr, 0, n, comparison);
     auto finish = std::chrono::high_resolution_clock::now();
-    time = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start).count();
+    time = std::chrono::duration<double, std::milli>(finish - start).count();
 }
 
 void QuickSortMedian(int *&a, int start, int last, long long& comp){

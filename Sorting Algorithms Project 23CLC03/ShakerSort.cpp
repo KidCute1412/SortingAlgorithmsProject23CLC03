@@ -4,7 +4,7 @@ void sortingAlgorithm::performShakerSort(){
     auto start = std::chrono::high_resolution_clock::now();
     ShakerSort(arr, n, comparison);
     auto finish = std::chrono::high_resolution_clock::now();
-	time = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start).count();
+	time = std::chrono::duration<double, std::milli>(finish - start).count();
 }
 
 void ShakerSort(int *&a, int n, long long& comp){

@@ -28,5 +28,5 @@ void sortingAlgorithm::performSelectionSort()
     auto start = std::chrono::high_resolution_clock::now();
     selectionSort(arr, n, comparison);
     auto end = std::chrono::high_resolution_clock::now();
-    time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+    time = std::chrono::duration<double, std::milli>(end - start).count();
 }

@@ -1,14 +1,14 @@
-﻿  ShakerSort.cpp
-D:\Sorting Algorithms Project 23CLC03\Sorting Algorithms Project 23CLC03\ShakerSort.cpp(7,84): warning C4244: '=': conversion from '_Rep' to 'double', possible loss of data
-          with
-          [
-              _Rep=__int64
-          ]
+﻿  BubbleSort.cpp
+  CountingSort.cpp
+  FlashSort.cpp
+  HeapSort.cpp
+  InsertionSort.cpp
+  MergeSort.cpp
+  QuickSort.cpp
+  RadixSort.cpp
+  SelectionSort.cpp
+  ShakerSort.cpp
   ShellSort.cpp
-D:\Sorting Algorithms Project 23CLC03\Sorting Algorithms Project 23CLC03\ShellSort.cpp(29,84): warning C4244: '=': conversion from '_Rep' to 'double', possible loss of data
-          with
-          [
-              _Rep=__int64
-          ]
   Generating Code...
+D:\Sorting Algorithms Project 23CLC03\Sorting Algorithms Project 23CLC03\QuickSort.cpp(30): warning C4715: 'MedianOfThreePartition': not all control paths return a value
   Sorting Algorithms Project 23CLC03.vcxproj -> D:\Sorting Algorithms Project 23CLC03\SortingAlgorithms.exe

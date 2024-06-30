@@ -26,5 +26,5 @@ void sortingAlgorithm::performBubbleSort(){
     auto start = std::chrono::high_resolution_clock::now();
   	comparison = bubbleSort(arr, n);
     auto end = std::chrono::high_resolution_clock::now();
-	time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+	time = std::chrono::duration<double, std::milli>(end - start).count();
 }
